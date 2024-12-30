@@ -1,0 +1,8 @@
+prefix=/home/fan00123/catkin_ws/install
+
+Name: hw_pkg
+Description: Description of hw_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

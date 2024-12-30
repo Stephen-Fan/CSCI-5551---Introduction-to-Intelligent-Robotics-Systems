@@ -1,0 +1,14 @@
+<launch>
+    <!-- Launch Gazebo with TurtleBot3 -->
+    
+ 
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+
+	<include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch">
+        <remap from="/cmd_vel" to="/teleop_cmd_vel" />
+    </include>
+
+    <!-- Launch Obstacle Avoidance Node -->
+    <node pkg="hw_pkg" type="obstacle_avoidance.py" name="obstacle_avoidance" output="screen" />
+
+</launch>
